@@ -1,0 +1,139 @@
+{
+    "data": {
+        "blogs": [
+            {
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non elit ut ante accumsan tempus. Vestibulum dignissim tempor bibendum. Donec scelerisque non eros sit amet rutrum. Curabitur vestibulum leo scelerisque massa lobortis dictum. Sed enim velit, hendrerit sed viverra nec, consectetur quis elit. Aenean vel velit auctor, porttitor felis id, ornare turpis.",
+                "img": "./images/artikkeli1.jpeg",
+                "source": "https://www.elle.se/decoration/inredningstrender-helsinki-design-week/8736125"
+            },
+            {
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non elit ut ante accumsan tempus. Vestibulum dignissim tempor bibendum. Donec scelerisque non eros sit amet rutrum. Curabitur vestibulum leo scelerisque massa lobortis dictum. Sed enim velit, hendrerit sed viverra nec, consectetur quis elit. Aenean vel velit auctor, porttitor felis id, ornare turpis.",
+                "img": "./images/artikkeli2.jpeg",
+                "source": ""
+            },
+            {
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non elit ut ante accumsan tempus. Vestibulum dignissim tempor bibendum. Donec scelerisque non eros sit amet rutrum. Curabitur vestibulum leo scelerisque massa lobortis dictum. Sed enim velit, hendrerit sed viverra nec, consectetur quis elit. Aenean vel velit auctor, porttitor felis id, ornare turpis.",
+                "img": "./images/artikkeli3.jpeg",
+                "source": "https://www.iltalehti.fi/sisustus/a/b774303a-16ef-4188-80dd-40011b54915a"
+            },
+            {
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non elit ut ante accumsan tempus. Vestibulum dignissim tempor bibendum. Donec scelerisque non eros sit amet rutrum. Curabitur vestibulum leo scelerisque massa lobortis dictum. Sed enim velit, hendrerit sed viverra nec, consectetur quis elit. Aenean vel velit auctor, porttitor felis id, ornare turpis.",
+                "img": "./images/artikkeli4.jpeg",
+                "source": "https://www.dwell.com/article/best-furniture-housewares-helsinki-design-week-2022-c87a9795"
+            }
+        ],
+        "items": [
+            {
+                "id": "1",
+                "name": "Hetki",
+                "summaryTitle": "Sohvapöytä Japanilaisella kosketuksella",
+                "summary": "Massiivitammesta Helsingissä valmistettu sohvapöytä tuo kotiin Japanilaista kulttuuria.",
+                "description": "Hetki pöydän muotokieli on saanut vaikutteita japanilaisesta muotoilusta. Levymäisten jalkojen sijoittelun vuoksi pöytä saa erilaisen ilmeen eri suunnista katsottaessa. Pöytä valmistetaan massiivitammesta käsityönä Helsingissä.",
+                "category": "Sohvapöytä",
+                "price": 1100,
+                "posterImg": "./images/Hetki.jpeg",
+                "productImages": ["./images/Hetki.jpeg","./images/hetki2.jpeg","./images/hetki3.jpeg"],
+                "rating": "4.5",
+                "length": "80cm",
+                "width": "80cm",
+                "height": "36cm",
+                "ratingNro": 12
+            },
+            {
+                "id": "2",
+                "name": "Kanto",
+                "summaryTitle": "Pehmeästi muotoiltu sohvapöytä",
+                "summary": "Kanto valmistetaan kuusesta. Paksu kuusiparru kuivataan uunissa useita viikkoja ennen kun sitä voidaan käyttää Kantopöydän valmistuksessa.",
+                "description": "Kanto valmistetaan kuusesta. Paksu kuusiparru kuivataan uunissa useita viikkoja ennen kun sitä voidaan käyttää Kantopöydän valmistuksessa. Pehmeä muotoilu on toteutettu veistämällä sekä hiomalla. Kanto valmistetaan käsityönä tilauksesta Helsingissä. Jokainen Kanto on uniikki.",
+                "category": "Sohvapöytä",
+                "price": 1200,
+                "posterImg": "./images/kanto.jpeg",
+                "productImages": ["./images/kanto.jpeg","./images/kanto1.jpeg","./images/kanto2.jpeg","./images/kanto3.jpeg"],
+                "rating": "4.5",
+                "length": "95cm",
+                "width": "95cm",
+                "height": "35cm",
+                "ratingNro": 31
+            },
+            {
+                "id": "3",
+                "name": "Karkki",
+                "summaryTitle": "Leikittelevä ja tukeva ruokapöytä",
+                "summary": "Muodoltaan jännittävä ruokapöytä lukuisilla värivaihtoehdoilla tuo arkeen piristystä.",
+                "description": "Pöydän leikittelevä muoto on jännittävä ja silti siinä on säilytetty perinteisen suorakulmaisen pöydän käytännöllisyys. Pöydän kansi valmistetaan MDF-levystä ja jalat teräksestä. Pöydän saa lukuisilla eri väreillä ja kahdessa eri koossa. Värivaihtoehtoihin pääset tutustumaan alla olevasta painikkeesta.",
+                "category": "Ruokapöytä",
+                "price": 2200,
+                "models": [
+                    {
+                    "size": "Medium",
+                    "price": 2200,
+                    "length": "150cm",
+                    "width": "120cm",
+                    "height": "74cm"
+                    },
+                    {
+                    "size": "Large",
+                    "price": 3200,
+                    "length": "210cm",
+                    "width": "120cm",
+                    "height": "74cm"
+                    }
+                ],
+                "posterImg": "./images/karkki.jpeg",
+                "productImages": ["./images/karkki.jpeg","./images/karkki1.jpeg","./images/karkki2.jpeg","./images/karkki3.jpeg","./images/karkki4.jpeg","./images/karkki5.jpeg"],
+                "rating": "4.5",
+                "ratingNro": 16
+            },
+            {
+                "id": "4",
+                "name": "Laineikko",
+                "summaryTitle":"Moderni ja minimalistinen Tv-taso",
+                "summary":"Laineikko valmistetaan massiivitammesta. Tv-tasossa on alaspäin aukeavat ovet, joiden takaa paljastuu säilytystilaa medialaitteille sekä muille olohuoneen tavaroille.",
+                "category": "Tv-taso",
+                "description": "Laineikko valmistetaan massiivitammesta. Tv-tasossa on alaspäin aukeavat ovet, joiden takaa paljastuu säilytystilaa medialaitteille sekä muille olohuoneen tavaroille. Tasossa ei ole takaseinää, joka mahdollistaa tv-tason asetuksen seinää vasten myös pistorasioiden kohdalla sekä piilottaa johdot kätevästi tason sisään. Laineikko hinnoitellaan leveyden mukaan",
+                "price": 1600,
+                "posterImg": "./images/Laineikko.jpeg",
+                "productImages": ["./images/Laineikko.jpeg","./images/laineikko1.jpeg","./images/laineikko2.jpeg","./images/laineikko3.jpeg","./images/laineikko4.jpeg"],
+                "rating": "4.5",
+                "length": "160cm",
+                "width": "55cm",
+                "height": "41cm",
+                "extraPrice": 100,
+                "extraLength": 10,
+                "ratingNro":19
+            },
+            {
+                "id": "5",
+                "name": "Roackstar",
+                "summaryTitle":"Rohkea ja kulmikas nojatuoli",
+                "summary":"Rockstar on suunniteltu tarjoamaan tukea ja mukavuutta. Teräsrungon muodot sekä kulmikkaat vegaani nahkaiset pehmusteet luovat kokonaisuuden, jota on miellyttävä katsoa, mutta myös käyttää.",
+                "description": "Rockstar on suunniteltu tarjoamaan tukea ja mukavuutta. Teräsrungon muodot sekä kulmikkaat vegaani nahkaiset pehmusteet luovat kokonaisuuden, jota on miellyttävä katsoa, mutta myös käyttää.",
+                "category": "Nojatuoli",
+                "price": 1100,
+                "posterImg": "./images/rockstar.jpeg",
+                "productImages": ["./images/rockstar.jpeg","./images/rockstar1.jpeg","./images/rockstar2.jpeg"],
+                "rating": "4.5",
+                "length": "75cm",
+                "width": "100cm",
+                "height": "65cm",
+                "ratingNro": 6
+            },
+            {
+                "id": "6",
+                "name": "Säleikkö",
+                "summaryTitle":"Morderni ja kätännöllinen senkki",
+                "summary":"Senkin säleikköjen välistä sarastava valo ja varjo vuorottelevat harmonisesti. Senkkiä valmistetaan tammesta sekä koivusta.",
+                "description": "Senkin suunnittelussa perusta oli luoda tuote, jonka voi sijoittaa myös tilan keskelle perinteisen seinän vierustan sijaan. Senkin säleikköjen välistä sarastava valo ja varjo vuorottelevat harmonisesti. Senkkiä valmistetaan tammesta sekä koivusta. Lopputuloksena syntyy artesaanin valmistama kaunis ja kestävä tuote.",
+                "category": "Senkki",
+                "price": 3300,
+                "posterImg": "./images/Senkki.jpeg",
+                "productImages": ["./images/Senkki.jpeg","./images/senkki1.jpeg","./images/senkki2.jpeg"],
+                "rating": "4.5",
+                "length": "124cm",
+                "width": "52cm",
+                "height": "72cm",
+                "ratingNro":11
+            }
+        ]
+    }
+}
