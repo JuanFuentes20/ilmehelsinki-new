@@ -3,6 +3,7 @@ import Home from '../Pages/Home'
 import NoPage from '../Pages/NoPage'
 import OrderPage from '../Pages/OrderPage'
 import { useState, useEffect } from 'react'
+import data from '../db.json'
 
 export default function AppRouter() {
 
@@ -10,19 +11,17 @@ export default function AppRouter() {
   const [blogs, setBlogs] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:3001/data")
-      .then(response => response.json())
-      .then((data) => {
-        setItems(data.items)
-        setBlogs(data.blogs)
-      })
-      .catch((error) => console.log(error))
+
+    console.log(data.data)
+    setItems(items => data.data.items)
+    setBlogs(blogs => data.data.blogs)
+
   }, [])
 
   return (
     <BrowserRouter basename='/ilmehelsinki-new'>
       <Routes>
-        <Route exac path='/' element={<Home items={items} blogs={blogs}/>} />
+        <Route exac path='/' element={<Home items={items} blogs={blogs} />} />
         <Route path="/tuote/:id" element={<OrderPage items={items} />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
