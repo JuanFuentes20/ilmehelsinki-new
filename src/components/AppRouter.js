@@ -20,9 +20,9 @@ export default function AppRouter() {
   }, [])
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/ilmehelsinki-new'>
       <Routes>
-        <Route path='/' element={<Home items={items} blogs={blogs}/>} />
+        <Route exac path='/' element={<Home items={items} blogs={blogs}/>} />
         <Route path="/tuote/:id" element={<OrderPage items={items} />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
