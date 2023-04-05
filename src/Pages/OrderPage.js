@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
-import {useNavigate} from 'react-router-dom'
 import Order from '../components/Order';
 import Footer from '../components/Footer';
 
@@ -8,9 +7,6 @@ export default function OrderPage({items}) {
 
     const [imageIndex, setImageIndex] = useState(0)
     const [modelIndex, setModelIndex] = useState(0)
-
-
-    const navigate = useNavigate()
 
     const { id } = useParams()
     const idExists = items.length > 0 && items.some(item => item.id === id)
@@ -51,9 +47,9 @@ export default function OrderPage({items}) {
           <div className='page-container'>
             <h1><a href="https://juanfuentes20.github.io/ilmehelsinki-new/" style={{ textDecoration: 'none', color: 'black'}}>ILME</a></h1>
             <div className='top'>
-                <div className='go-back' onClick={() => navigate(`/`)}>
+                <div className='go-back'>
                   <span className="material-symbols-outlined">arrow_back</span>
-                  <p>Palaa takaisin</p>
+                  <p><a href="https://juanfuentes20.github.io/ilmehelsinki-new/" style={{ textDecoration: 'none', color: 'black'}}>Palaa takaisin</a></p>
                 </div>
             </div>
             <div className='item'>
