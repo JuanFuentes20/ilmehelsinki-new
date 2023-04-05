@@ -49,7 +49,7 @@ export default function OrderPage({items}) {
           <div>Loading...</div>
         ) : item ? (
           <div className='page-container'>
-            <h1 onClick={() => navigate(`/`)} style={{"cursor": "pointer"}}>ILME</h1>
+            <h1><a href="https://juanfuentes20.github.io/ilmehelsinki-new/" style={{ textDecoration: 'none', color: 'black'}}>ILME</a></h1>
             <div className='top'>
                 <div className='go-back' onClick={() => navigate(`/`)}>
                   <span className="material-symbols-outlined">arrow_back</span>
