@@ -26,6 +26,7 @@ export default function Order() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
+    // eslint-disable-next-line
     const [submitError, setSubmitError] = useState(false)
 
     const handleSubmit = (e) => {
