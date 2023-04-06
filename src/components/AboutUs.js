@@ -3,7 +3,7 @@ export default function AboutUs({blogs}) {
         <div className="about-us">
             <h1>Meistä</h1>
             <div className="about-us-container">
-                <img src="ilmehelsinki-new/images/yhteiskuva.jpeg" alt="yhteiskuva"/>
+                <img src="./images/yhteiskuva.jpeg" alt="yhteiskuva"/>
                 <div>
                     <h2>Ilmettä kotiisi?</h2>
                     <p>Ilme on helsinkiläinen design studio, joka tuottaa ainutlaatuisia huonekaluja inspiroiviin kohtauspaikkoihin kotona, toimistoissa ja julkisissa tiloissa. Omaperäiset ja rohkeat muodot näkyvät tuotteissamme. Valmistamme huonekaluja sekä taide-esineitä Ilmeen omalla verstaalla Helsingissä. Toteutamme myös mittatilaustöitä ja suurempia kokonaisuuksia. Näistä lisää alempana kohdassa projektit.</p>
@@ -16,8 +16,8 @@ export default function AboutUs({blogs}) {
                     </ul>
                     </div>
                     <div className="article-images">
-                        <img src="ilmehelsinki-new/images/artikkeli1.jpeg" alt="Elle decoration"/>
-                        <img src="ilmehelsinki-new/images/artikkeli2.jpeg" alt="Deko"/>
+                        <img src="./images/artikkeli1.jpeg" alt="Elle decoration"/>
+                        <img src="./images/artikkeli2.jpeg" alt="Deko"/>
                     </div>
                 </div>
             </div>
