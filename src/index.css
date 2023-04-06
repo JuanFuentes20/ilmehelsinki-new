@@ -57,6 +57,7 @@ li {
 }
 
 .hamburger {
+  opacity: 0;
   width: fit-content;
   height: 20px;
   display: flex;
@@ -74,7 +75,8 @@ li {
 .background-video {
   margin-top: 75px;
   margin-bottom: 5%;
-  height: 600px;
+  height: auto;
+  max-height: 600px;
 }
 
 .my-video {
@@ -94,7 +96,7 @@ img {
 
 .collection {
   display: flex;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
   justify-content: center;
 }
 
@@ -288,7 +290,7 @@ footer .contacts {
 
 .order-img {
   height: 100%;
-  width: 700px;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -318,6 +320,8 @@ footer .contacts {
 .product-page-image {
   position: relative;
   margin-right: 10%;
+  aspect-ratio: 1;
+  width: 100%;
 }
 
 .product-page-image .overlay{
@@ -334,9 +338,17 @@ footer .contacts {
 }
 
 .info {
-  overflow: auto;
+  width: 100%;
+  aspect-ratio: 1;
   font-size: larger;
 }
+.product-info {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1;
+  font-size: larger;
+}
+
 
 .order {
   background-color: #f8f6f6;
@@ -437,29 +449,105 @@ footer .contacts {
 
 .about-us h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 3dvw;
   margin-bottom: 5%;
 }
 
 .about-us h2 {
-  font-size: 35px;
+  font-size: 2dvw;
   line-height: 28px;
   margin-bottom: 5%;
 }
 
 .about-us img {
+  aspect-ratio: 1;
   width: 40%;
-  height: 40%;
+  height: auto;
+  object-fit: cover;
   margin-right: 10%;
 }
 
 .about-us-container {
   display: flex;
 }
+
+.about-us-container .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .articles {
   margin: 5% 0;
 }
 
 .articles li {
-  list-style: circle
+  list-style: circle;
+  font-size: 1dvw;
+}
+
+@media screen and (max-width: 600px) {
+  .page-container .item {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .page-container {
+    height: auto;
+    margin-top: 50px;
+  }
+
+  .product-page-image {
+    margin: 0;
+  }
+
+.order form input:nth-child(2),
+.order form input:nth-child(4) {
+  width: 70%;
+}
+
+.order form textarea {
+  width: 90%;
+}
+
+.product-info {
+  aspect-ratio: unset;
+}
+
+.favourite-collection {
+  flex-direction: column;
+}
+
+.favourite-item {
+  width: 100%;
+}
+
+.about-us-container {
+  flex-direction: column;
+}
+
+.about-us img {
+  width: 100%;
+}
+
+.about-us h1 {
+  font-size: 40px;
+  margin: 5% 0;
+}
+
+.about-us h2 {
+  font-size: 30px;
+  margin: 5% 0;
+}
+
+.articles li {
+  font-size: 15px;
+}
+
+.hamburger {
+  opacity: 1;
+}
+
+.navbar-links {
+  display: none;
+}
 }

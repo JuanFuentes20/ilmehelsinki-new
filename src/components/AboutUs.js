@@ -4,7 +4,7 @@ export default function AboutUs({blogs}) {
             <h1>Meistä</h1>
             <div className="about-us-container">
                 <img src="./images/yhteiskuva.jpeg" alt="yhteiskuva"/>
-                <div>
+                <div className="info">
                     <h2>Ilmettä kotiisi?</h2>
                     <p>Ilme on helsinkiläinen design studio, joka tuottaa ainutlaatuisia huonekaluja inspiroiviin kohtauspaikkoihin kotona, toimistoissa ja julkisissa tiloissa. Omaperäiset ja rohkeat muodot näkyvät tuotteissamme. Valmistamme huonekaluja sekä taide-esineitä Ilmeen omalla verstaalla Helsingissä. Toteutamme myös mittatilaustöitä ja suurempia kokonaisuuksia. Näistä lisää alempana kohdassa projektit.</p>
                     <div className="articles">

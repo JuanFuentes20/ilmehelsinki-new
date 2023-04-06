@@ -60,7 +60,7 @@ export default function OrderPage({items}) {
                       <button onClick={handleNextImage} className="material-symbols-outlined">arrow_forward</button>
                     </div>
                  </div>
-                 <div className='info'>
+                 <div className='product-info'>
                     <div><h2>{item.name}</h2></div>
                     <p>{item.models ? item.models[modelIndex].price : item.price}€</p>
                     <p>{item.summary}</p>

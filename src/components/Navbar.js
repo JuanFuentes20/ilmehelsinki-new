@@ -10,7 +10,7 @@ export default function Navbar({scrollToSection}) {
                     <li onClick={() => scrollToSection(".contacts")}>Yhteystiedot</li>
                 </ul>
             </div>
-            <div className="hamburger" style={{opacity: 0}}>
+            <div className="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
