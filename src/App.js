@@ -39,8 +39,8 @@ function App({items, blogs}) {
   return (
     <div className="App">
       <Navbar scrollToSection={scrollToSection}/>
+      <LandingItem/>
       <div className="container">
-      <LandingItem items={items} handleBuy={handleBuy}/>
       <OurFavoriteCollection />
       <FavouriteCollection items={items} handleBuy={handleBuy}/>
       </div>

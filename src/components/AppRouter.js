@@ -11,8 +11,6 @@ export default function AppRouter() {
   const [blogs, setBlogs] = useState([])
 
   useEffect(() => {
-
-    console.log(data.data)
     setItems(items => data.data.items)
     setBlogs(blogs => data.data.blogs)
 
