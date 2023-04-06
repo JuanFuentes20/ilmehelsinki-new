@@ -40,11 +40,11 @@ export default function OrderPage({items}) {
     }
 
     return (
-        <div className='container'>
-        {items.length === 0 ? (
+        items.length === 0 ? (
           <div>Loading...</div>
         ) : item ? (
-          <div className='page-container'>
+          <>
+          <div className='container page-container'>
             <h1><a href="https://juanfuentes20.github.io/ilmehelsinki-new/" style={{ textDecoration: 'none', color: 'black'}}>ILME</a></h1>
             <div className='top'>
                 <div className='go-back'>
@@ -83,12 +83,12 @@ export default function OrderPage({items}) {
                     </div>
                 </div>
             </div>
-            <Order />
-            <Footer />
           </div>
+          <Order />
+          <Footer />
+          </>
         ) : (
           <h1>Page Not Found</h1>
-        )}
-      </div>
+        )
     )
 }

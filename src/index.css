@@ -210,7 +210,8 @@ img {
 footer {
   width: 100%;
   height: fit-content;
-  margin-top: 10%;
+  margin-top: 5%;
+  padding: 0 10%;
 }
 
 footer .top {
@@ -245,6 +246,7 @@ footer .contacts {
 .back-to-start {
   display: flex;
   cursor: pointer;
+  align-items: center;
 }
 
 .fa-instagram {
@@ -333,9 +335,13 @@ footer .contacts {
 
 .info {
   overflow: auto;
+  font-size: larger;
 }
 
 .order {
+  background-color: #f8f6f6;
+  padding: 5% 10%;
+  font-size: larger;
   position: relative;
   margin-top: 5%;
 }
@@ -345,6 +351,7 @@ footer .contacts {
 }
 
 .order form {
+  gap: 5px;
   display: flex;
   flex-direction: column;
 }
