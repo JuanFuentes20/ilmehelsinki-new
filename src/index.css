@@ -425,8 +425,15 @@ footer .contacts {
   background-color: rgba(29, 185, 89,0.6);
 }
 
+textarea:focus,
+input:focus,
+select:focus {
+    font-size: 16px; /* set the font-size to the desired value */
+    -webkit-text-size-adjust: none; /* disable automatic text size adjustment */
+}
+
 .notification {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
@@ -449,6 +456,7 @@ footer .contacts {
 
 .active {
   opacity: 1;
+  display: flex;
 }
 
 .notification button {
