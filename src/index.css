@@ -580,4 +580,8 @@ footer .contacts {
   scale: 1;
   overflow: hidden;
 }
+
+footer .top {
+  flex-direction: column;
+}
 }
