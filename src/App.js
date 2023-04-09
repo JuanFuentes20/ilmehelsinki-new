@@ -18,10 +18,16 @@ function App({items, blogs}) {
 
   const scrollToSection = (classname) => {
     const navbar = document.querySelector(".navbar");
+    const mobileMenu = document.querySelector(".hamburger-navbar-links")
+    const mobileMenuHeight = mobileMenu.offsetHeight
     const element = document.querySelector(classname);
     const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
     const navbarHeight = navbar.offsetHeight;
-    const scrollPosition = elementPosition - navbarHeight;
+    let scrollPosition = elementPosition - navbarHeight;
+
+    if(mobileMenu.classList.contains("active")){
+      scrollPosition -= mobileMenuHeight
+    }
 
     if(element){
       element.style.transition = "scroll 3s ease-in-out"

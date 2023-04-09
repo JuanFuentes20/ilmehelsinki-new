@@ -38,7 +38,7 @@ body {
   height: 75px;
 }
 
-.navbar li {
+.navbar-container li {
   list-style: none;
 }
 
@@ -66,6 +66,33 @@ li {
   align-items: center;
 }
 
+.hamburger-navbar-links {
+  position: fixed;
+  z-index: 10;
+  left: -100%;
+  top: 75px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  transition: 0.5s ease;
+}
+
+.hamburger-navbar-links.active {
+  left: 0;
+}
+
+.hamburger-navbar-links ul{
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  justify-content: space-around;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
 .hamburger span {
   width: 20px;
   height: 1px;
@@ -84,9 +111,6 @@ li {
   max-height: 600px;
   object-fit: cover;
 }
-
-
-
 
 img {
   width: 100%;
@@ -170,7 +194,7 @@ img {
   width: 100%;
   height: 100%;
   opacity: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.3);
   transition: opacity 0.3s ease;
   align-items: center;
   justify-content: center;
@@ -178,16 +202,16 @@ img {
 
 .buy-button {
   color: white;
+  font-weight: 800;
   text-align: center;
   font-size: 15px;
-  background-color: rgba(111, 111, 111, 0.8);
+  background-color: rgba(23, 23, 23, 0.8);
   height: 30px;
   border-radius: 15px;
   margin: 5% 5%;
   padding: 0% 5%;
   border: none;
   cursor: pointer;
-
 }
 
 .fade-active {
@@ -201,7 +225,7 @@ img {
 
 .favourite-item:hover{
   z-index: 3;
-  scale: 1.2;
+  scale: 1.1;
   overflow: hidden;
 }
 
@@ -449,12 +473,12 @@ footer .contacts {
 
 .about-us h1 {
   text-align: center;
-  font-size: 3dvw;
+  font-size: 40px;
   margin-bottom: 5%;
 }
 
 .about-us h2 {
-  font-size: 2dvw;
+  font-size: 30px;
   line-height: 28px;
   margin-bottom: 5%;
 }
@@ -482,7 +506,7 @@ footer .contacts {
 
 .articles li {
   list-style: circle;
-  font-size: 1dvw;
+  font-size: 1.5dvw;
 }
 
 @media screen and (max-width: 600px) {
@@ -549,5 +573,11 @@ footer .contacts {
 
 .navbar-links {
   display: none;
+}
+
+.favourite-item:hover{
+  z-index: 3;
+  scale: 1;
+  overflow: hidden;
 }
 }
