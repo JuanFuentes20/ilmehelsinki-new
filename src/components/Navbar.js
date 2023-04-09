@@ -1,6 +1,8 @@
 export default function Navbar({scrollToSection}) {
     const displayMenu = () => {
         const menu = document.querySelector(".hamburger-navbar-links")
+        const hamburger = document.querySelector(".hamburger")
+        hamburger.classList.toggle("active")
         menu.classList.toggle("active")
     }
 
