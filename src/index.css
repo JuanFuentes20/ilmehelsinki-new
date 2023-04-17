@@ -121,7 +121,7 @@ li {
 
 .background-video {
   margin-top: 75px;
-  margin-bottom: 5%;
+  margin-bottom: 70px;
   height: auto;
   max-height: 600px;
 }
@@ -140,7 +140,7 @@ img {
 
 .collection {
   display: flex;
-  margin-bottom: 5%;
+  margin-bottom: 60px;
   justify-content: center;
 }
 
@@ -189,6 +189,7 @@ img {
 }
 
 .favourite-collection {
+  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   gap: 5%;
@@ -502,12 +503,13 @@ select:focus {
   flex-direction: column;
   background-color: #f8f6f6;
   padding: 0 10% 5% 10%;
+  margin-bottom: 50px;
 }
 
 .about-us h1 {
   text-align: center;
   font-size: 40px;
-  margin-bottom: 5%;
+  margin: 20px 0;
 }
 
 .about-us h2 {
@@ -589,13 +591,17 @@ select:focus {
   flex-direction: column;
 }
 
+.about-us-container .info {
+  margin-top: 20px;
+
+}
+
 .about-us img {
   width: 100%;
 }
 
 .about-us h1 {
   font-size: 40px;
-  margin: 5% 0;
 }
 
 .about-us h2 {
