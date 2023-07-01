@@ -54,7 +54,7 @@ export default function OrderPage({items}) {
             </div>
             <div className='item'>
                  <div className="product-page-image">
-                    <div className="order-img" style={{backgroundImage: `url(.${item.productImages[imageIndex]})`}}></div>
+                    <div className="order-img" style={{backgroundImage: `url(${process.env.PUBLIC_URL + item.productImages[imageIndex]})`}}></div>
                     <div className="overlay">
                       <button onClick={handlePreviousImage} className="material-symbols-outlined">arrow_back</button>
                       <button onClick={handleNextImage} className="material-symbols-outlined">arrow_forward</button>
