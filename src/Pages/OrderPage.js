@@ -48,8 +48,10 @@ export default function OrderPage({items}) {
             <h1><a href="https://juanfuentes20.github.io/ilmehelsinki-new/" style={{ textDecoration: 'none', color: 'black'}}>ILME</a></h1>
             <div className='top'>
                 <div className='go-back'>
-                  <span className="material-symbols-outlined">arrow_back</span>
-                  <p><a href="https://juanfuentes20.github.io/ilmehelsinki-new/" style={{ textDecoration: 'none', color: 'black'}}>Palaa takaisin</a></p>
+                  <a href="https://juanfuentes20.github.io/ilmehelsinki-new/" style={{ textDecoration: 'none', color: 'black'}}>
+                    <span className="material-symbols-outlined">arrow_back</span>
+                    <p>Palaa takaisin</p>
+                  </a>
                 </div>
             </div>
             <div className='item'>

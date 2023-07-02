@@ -176,7 +176,7 @@ img {
 .collection-filter button {
   text-align: center;
   font-size: 100%;
-  background-color: #f8f6f6;
+  background-color: #eadbd2;
   height: 30px;
   margin-right: 2%;
   padding: 0 1%;
@@ -282,6 +282,7 @@ footer .bottom {
 footer .contacts {
   display: flex;
   flex-direction: column;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -326,9 +327,8 @@ footer .contacts {
   margin: 5% 0;
 }
 
-.go-back {
+.go-back a{
   display: flex;
-  margin-right: 5%;
   align-items: center;
   cursor: pointer;
 }
@@ -396,7 +396,7 @@ footer .contacts {
 
 
 .order {
-  background-color: #f8f6f6;
+  background-color: #eadbd2;
   padding: 5% 10%;
   font-size: larger;
   position: relative;
@@ -501,7 +501,7 @@ select:focus {
 .about-us {
   display: flex;
   flex-direction: column;
-  background-color: #f8f6f6;
+  background-color: #eadbd2;
   padding: 0 10% 5% 10%;
   margin-bottom: 50px;
 }
@@ -633,5 +633,9 @@ footer .top {
 
 .notification {
   width: 300px;
+}
+
+.background-video {
+  margin-bottom: 40px;
 }
 }
