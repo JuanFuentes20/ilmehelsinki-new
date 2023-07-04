@@ -594,15 +594,10 @@ select:focus {
 
 .favourite-collection {
   flex-direction: column;
-  height: 550px;
-  flex-wrap: nowrap;
-  overflow-y: auto;
-  gap: 0;
 }
 
 .favourite-item {
   width: 100%;
-  height: fit-content;
 }
 
 .about-us-container {
