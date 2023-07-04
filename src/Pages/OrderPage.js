@@ -44,8 +44,10 @@ export default function OrderPage({items}) {
           <div>Loading...</div>
         ) : item ? (
           <>
+          <div className="banner">
+              <h1><a href="https://juanfuentes20.github.io/ilmehelsinki-new/" style={{ textDecoration: 'none', color: 'white', opacity: 0.9}}>ILME</a></h1>
+          </div>
           <div className='container page-container'>
-            <h1><a href="https://juanfuentes20.github.io/ilmehelsinki-new/" style={{ textDecoration: 'none', color: 'black'}}>ILME</a></h1>
             <div className='top'>
                 <div className='go-back'>
                   <a href="https://juanfuentes20.github.io/ilmehelsinki-new/" style={{ textDecoration: 'none', color: 'black'}}>

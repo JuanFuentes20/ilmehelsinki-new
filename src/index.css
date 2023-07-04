@@ -325,7 +325,7 @@ footer .contacts {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  margin: 5% 0;
+  margin-bottom: 20px;
 }
 
 .go-back a{
@@ -397,14 +397,15 @@ footer .contacts {
 
 .order {
   background-color: #eadbd2;
-  padding: 5% 10%;
+  padding: 2% 10%;
   font-size: larger;
   position: relative;
-  margin-top: 5%;
+  margin-top: 15px;
 }
 
 .order p {
   margin: 2% 0;
+  max-width: 90ch;
 }
 
 .order form {
@@ -498,6 +499,14 @@ select:focus {
   background-color: rgba(248, 68, 48, 0.9);
 }
 
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #000000c4;
+  height: 75px;
+}
 .about-us {
   display: flex;
   flex-direction: column;
@@ -585,10 +594,15 @@ select:focus {
 
 .favourite-collection {
   flex-direction: column;
+  height: 550px;
+  flex-wrap: nowrap;
+  overflow-y: auto;
+  gap: 0;
 }
 
 .favourite-item {
   width: 100%;
+  height: fit-content;
 }
 
 .about-us-container {
