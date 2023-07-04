@@ -567,6 +567,7 @@ select:focus {
 
   .product-page-image {
     margin: 0;
+    aspect-ratio: 1;
   }
 
 .order form input:nth-child(2),
