@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  padding: 0 10%;
+  padding: 40px 10%;
 }
 
 .navbar {
@@ -121,14 +121,16 @@ li {
 
 .background-video {
   margin-top: 75px;
-  margin-bottom: 70px;
-  height: auto;
-  max-height: 600px;
+  height: 600px;
+  position: relative;
 }
 
 .my-video {
   width: 100%;
-  max-height: 600px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   object-fit: cover;
 }
 
@@ -140,7 +142,7 @@ img {
 
 .collection {
   display: flex;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   justify-content: center;
 }
 
@@ -189,7 +191,6 @@ img {
 }
 
 .favourite-collection {
-  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   gap: 5%;
@@ -339,7 +340,7 @@ footer .contacts {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .order-img button{
@@ -390,7 +391,7 @@ footer .contacts {
 .product-info {
   width: 100%;
   max-width: 350px;
-  aspect-ratio: 1;
+  overflow-y: auto;
   font-size: larger;
 }
 
@@ -503,7 +504,6 @@ select:focus {
   flex-direction: column;
   background-color: #eadbd2;
   padding: 0 10% 5% 10%;
-  margin-bottom: 50px;
 }
 
 .about-us h1 {
@@ -545,6 +545,10 @@ select:focus {
 }
 
 @media screen and (max-width: 600px) {
+  .background-video {
+    height: 220px;
+  }
+
   .page-container .item {
     flex-direction: column;
     height: auto;
@@ -633,9 +637,5 @@ footer .top {
 
 .notification {
   width: 300px;
-}
-
-.background-video {
-  margin-bottom: 40px;
-}
+}  
 }

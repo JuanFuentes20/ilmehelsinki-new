@@ -1,11 +1,14 @@
-import { useState } from "react"
+import React, { useRef, useState } from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from '@emailjs/browser';
 
 
-const Notification = ({submitError}) => {
+const Notification = ({submitError, setSubmitError}) => {
 
     const handleClose = () => {
         const notification = document.querySelector(".notification")
         notification.classList.remove("active")
+        setSubmitError(false)
     }
 
     return (
@@ -13,7 +16,7 @@ const Notification = ({submitError}) => {
         {submitError ? (
           <p>Valitettavasti jokin meni vikaan lähetyksessä. Koita uudestaan ja mikäli vika toistuu, ole meihin yhteydessä.</p>
         ) : (
-          <p>Jeei. Yhteydenottosi on vastaanotettu. Olemme teihin yhteydessä mahdollisimman pian.</p>
+          <p>Yhteydenottosi on vastaanotettu. Olemme teihin yhteydessä mahdollisimman pian.</p>
         )}
   
       <button onClick={handleClose}>Sulje</button>
@@ -23,29 +26,39 @@ const Notification = ({submitError}) => {
 
 export default function Order() {
 
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [message, setMessage] = useState('')
     // eslint-disable-next-line
     const [submitError, setSubmitError] = useState(false)
+    const [captchaVerified, setVerified] = useState(false)
+    const form = useRef()
+
+    const validateForm = () => {
+      if (form.current.user_name.value === '' || form.current.user_email.value === '' || form.current.message.value === ''){
+        window.alert("Täytä jokainen kohta")
+        return false
+      }
+      return true
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const mailData = {
-            name: name,
-            email: email,
-            message: message
+        const validated = validateForm()
+        if(captchaVerified && validated){
+          console.log("Sending message")
+          emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+          .then((result) => {
+              console.log(result.text);
+              const notification = document.querySelector(".notification")
+              notification.classList.add("active")
+              e.target.reset()
+          }, (error) => {
+              console.log(error.text);
+              setSubmitError(true)
+          });
         }
+    }
 
-        setName('')
-        setEmail('')
-        setMessage('')
-        console.log(mailData)
-        setTimeout(()=> {
-            const notification = document.querySelector(".notification")
-            notification.classList.add("active")
-        }, 1000)
-
+    const onChange = (value) => {
+      setVerified(true)
     }
 
     return (
@@ -55,17 +68,20 @@ export default function Order() {
             tai <a href="tel:+358 50 441 4009">+358 50 441 4009</a>. Kertokaa tarkemmin mikäli haluatte
             tuotteeseen joitain pieniä muutoksia, tai mikäli haluatte tuotteen mallikuvan tyylisenä. Ottakaa yhteyttä
             myös tilanteissa, missä haluatte tietää lisää.</p>
-            <form onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={handleSubmit}>
                 <label htmlFor="name">Nimi</label>
-                <input name="name" type="text" value={name} onChange={e => setName(e.target.value)}/>
+                <input name="user_name" type="text"/>
                 <label htmlFor="email">Sähköposti</label>
-                <input name="email" type="email" value={email} onChange={e => setEmail(e.target.value)}/>
+                <input name="user_email" type="email"/>
                 <label htmlFor="message">Viesti</label>
-                <textarea name="message" type="text" value={message} onChange={e => setMessage(e.target.value)}/>
-                <button type="Submit">Lähetä</button>
+                <textarea name="message" type="text"/>
+                <ReCAPTCHA
+                sitekey={process.env.REACT_APP_CAPTCHA_KEY}
+                onChange={onChange}
+              />
+                <button disabled={!captchaVerified} style={{ opacity: !captchaVerified ? 0.2 : 1 }}type="Submit">Lähetä</button>
             </form>
-            <Notification submitError={submitError}/>
+            <Notification submitError={submitError} setSubmitError={setSubmitError}/>
         </div>
     )
-
 }
