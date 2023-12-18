@@ -2,6 +2,8 @@ import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import Order from '../components/Order';
 import Footer from '../components/Footer';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 export default function OrderPage({items}) {
 
@@ -57,12 +59,14 @@ export default function OrderPage({items}) {
                 </div>
             </div>
             <div className='item'>
-                 <div className="product-page-image">
-                    <div className="order-img" style={{backgroundImage: `url(${process.env.PUBLIC_URL + item.productImages[imageIndex]})`}}></div>
-                    <div className="overlay">
-                      <button onClick={handlePreviousImage} className="material-symbols-outlined">arrow_back</button>
-                      <button onClick={handleNextImage} className="material-symbols-outlined">arrow_forward</button>
-                    </div>
+            <div className="product-page-image">
+                    <Carousel className='crsl'>
+                      {item.productImages.map(image => {
+                        return (
+                              <img key={image} src={process.env.PUBLIC_URL + image} alt='productImage'/>
+                        )
+                      })}
+                    </Carousel>
                  </div>
                  <div className='product-info'>
                     <div><h2>{item.name}</h2></div>

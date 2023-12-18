@@ -62,7 +62,7 @@ export default function Order() {
     }
 
     return (
-        <div className="order">
+        <div className="container order">
             <h2>Tilaa meiltä</h2>
             <p>Jätä meille yhteydenotto tässä tai soita numeroon <a href="tel:+358 44 521 1301">+358 44 521 1301</a>
             tai <a href="tel:+358 50 441 4009">+358 50 441 4009</a>. Kertokaa tarkemmin mikäli haluatte

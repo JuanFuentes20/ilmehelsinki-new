@@ -1,13 +1,14 @@
 import Navbar from "./components/Navbar";
-import LandingItem from "./components/LandingItems";
+import BackgroundVideo from "./components/BackgroundVideo";
 import OurFavoriteCollection from "./components/OurFavoritecollection";
 import FavouriteCollection from "./components/FavouriteCollection";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import {useNavigate} from 'react-router-dom'
+import LandingContent from "./components/LandingContent";
 
 
-function App({items, blogs}) {
+function App({items, blogs, scroll}) {
 
   const navigate = useNavigate()
   const handleBuy = (item) => {
@@ -42,18 +43,30 @@ function App({items, blogs}) {
     }
 }
 
-  return (
-    <div className="App">
+/* OLD
+<div className="App">
       <Navbar scrollToSection={scrollToSection}/>
       <LandingItem/>
       <div className="container">
       <OurFavoriteCollection />
       <FavouriteCollection items={items} handleBuy={handleBuy}/>
       </div>
-      <AboutUs blogs={blogs}/>
+      {<AboutUs blogs={blogs}/>}
       <div className="container">
       <Footer scrollToSection={scrollToSection}/>
       </div>
+      </div>
+*/
+
+
+  return (
+    <div className="App">
+      <Navbar scrollToSection={scrollToSection} scroll={scroll}/>
+      <section> 
+        <BackgroundVideo/>
+        <LandingContent />
+      </section>
+      <Footer />
     </div>
   );
 }

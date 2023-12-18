@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import smoothscroll from 'smoothscroll-polyfill';
-import './index.css';
+import './styles.css';
 import AppRouter from "./components/AppRouter"
 
 smoothscroll.polyfill();
