@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ilmehelsinki-new/static/css/main.ad21c746.css",
-    "main.js": "/ilmehelsinki-new/static/js/main.d4e3b01f.js",
+    "main.css": "/ilmehelsinki-new/static/css/main.4084f551.css",
+    "main.js": "/ilmehelsinki-new/static/js/main.5e100291.js",
     "index.html": "/ilmehelsinki-new/index.html",
-    "main.ad21c746.css.map": "/ilmehelsinki-new/static/css/main.ad21c746.css.map",
-    "main.d4e3b01f.js.map": "/ilmehelsinki-new/static/js/main.d4e3b01f.js.map"
+    "main.4084f551.css.map": "/ilmehelsinki-new/static/css/main.4084f551.css.map",
+    "main.5e100291.js.map": "/ilmehelsinki-new/static/js/main.5e100291.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad21c746.css",
-    "static/js/main.d4e3b01f.js"
+    "static/css/main.4084f551.css",
+    "static/js/main.5e100291.js"
   ]
 }
