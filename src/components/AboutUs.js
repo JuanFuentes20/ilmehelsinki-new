@@ -25,7 +25,9 @@ export default function AboutUs({blogs}) {
 
     return (
         <div className="about-us">
-            <img className="about-us-image" alt="Kanto" src={process.env.PUBLIC_URL + "/images/kanto.jpeg"}/>
+            <div className="about-hero">
+                <img className="about-us-image" alt="Kanto" src={process.env.PUBLIC_URL + "/images/kanto.jpeg"}/>
+            </div>
         </div>
     )
 }
