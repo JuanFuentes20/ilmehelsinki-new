@@ -495,7 +495,7 @@ form button {
     font-weight: 900;
   }
   
-  .active {
+  .notification.active {
     opacity: 1;
     display: flex;
   }
