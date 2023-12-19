@@ -633,6 +633,9 @@ footer .contacts {
         max-width: 500px;
     }
 
+    .product-list {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
     .product-tag p {
         max-width: 500px;
         margin: auto;
