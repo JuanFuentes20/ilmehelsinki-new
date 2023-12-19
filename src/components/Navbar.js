@@ -1,12 +1,35 @@
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, useLocation } from 'react-router-dom'
+
 
 export default function Navbar({scrollToSection, scroll}) {
     const navigate = useNavigate()
+    const location = useLocation();
+    const path = location.pathname;
+
+    const orderPage = path.includes("/collection/") ;
+
+    const navbar = document.querySelector(".navbar")
+    if( orderPage && navbar){
+      navbar.style.color = "black"
+      const hamburgerSpans = document.querySelectorAll(".hamburger span")
+      hamburgerSpans.forEach(hamburgerSpan => hamburgerSpan.style.backgroundColor = "black")
+      
+    } else if(!orderPage && navbar) {
+        navbar.style.color = "white"
+        const hamburgerSpans = document.querySelectorAll(".hamburger span")
+        hamburgerSpans.forEach(hamburgerSpan => hamburgerSpan.style.backgroundColor = "white")
+    }
+
     const navigateTo = (path) => {
         navigate(path);
         window.scrollTo(0, 0); // Scroll to the top of the page
-        displayMenu()
+        const contentWidth = document.documentElement.clientWidth;
+        if(contentWidth < 1024) {
+            displayMenu()
+        }
     };
+
+    
 
     const displayMenu = () => {
         const navbar = document.querySelector(".navbar")
@@ -30,7 +53,6 @@ export default function Navbar({scrollToSection, scroll}) {
                         <li onClick={() => navigateTo("/about-us")}>Meistä</li>
                         <li onClick={() => {
                         scrollToSection(".contacts")
-                        displayMenu()
                     }}>Yhteystiedot</li>
                     </ul>
                 </div>

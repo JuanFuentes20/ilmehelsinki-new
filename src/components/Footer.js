@@ -1,7 +1,14 @@
+import { useLocation } from 'react-router-dom';
+
 export default function Footer() {
+    const location = useLocation();
+    const path = location.pathname;
+
+    const isAboutUs = path === '/about-us' || path.includes("/collection/") ;
+    const backgroundColor = isAboutUs ? 'white' : '#f1f1ef';
 
     return (
-        <footer>
+        <footer style={{ backgroundColor: backgroundColor }}>
             <div className="top">
                 <h2>ILME</h2>
                 <div className="back-to-start" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>

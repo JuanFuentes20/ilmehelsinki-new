@@ -17,14 +17,6 @@ export default function OrderPage({items}) {
     const idExists = items.length > 0 && items.some(item => item.id === id)
     const item = idExists ? items.find(item => item.id === id) : null
 
-    const navbar = document.querySelector(".navbar")
-    if(navbar){
-      navbar.style.color = "black"
-      const hamburgerSpans = document.querySelectorAll(".hamburger span")
-      hamburgerSpans.forEach(hamburgerSpan => hamburgerSpan.style.backgroundColor = "black")
-      
-    }
-
     const handleOptions = (e) => {
       setModelIndex(current => e.target.value)
     }
