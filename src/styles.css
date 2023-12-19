@@ -47,7 +47,7 @@ img {
 }
 
 .navbar.active {
-    color: black;
+    color: black !important;
 }
 
 .navbar-container li {
@@ -145,7 +145,7 @@ li {
 }
 
 .hamburger.active span {
-    background-color: black;
+    background-color: black !important;
 }
 
 /*Background video*/
@@ -269,6 +269,8 @@ form button {
     position: relative;
     z-index: -100;
     margin-bottom: 3rem;
+    background: black;
+    overflow: hidden;
 }
 
 .about-hero p {
@@ -281,6 +283,7 @@ form button {
 }
 
 .about-us-image {
+    opacity: 0.7;
     position: absolute;
     top: 0;
     left: 0;
@@ -658,6 +661,10 @@ footer .contacts {
         max-width: 500px;
     }
 
+    .about-hero {
+        height: 55vh;
+    }
+
     .about-hero p {
         max-width: 600px;
     }
@@ -679,11 +686,12 @@ footer .contacts {
         width: 100%;
         max-width: none;
         object-fit: cover;
-        height: 500px;
+        height: 600px;
     }
 
     .articles {
         gap: 2rem;
+        padding: 2rem 15rem;
     }
 
     .articles p {
@@ -691,7 +699,7 @@ footer .contacts {
     }
 
     .article-images img {
-        height: 500px;
+        height: 400px;
     }
 
     .container {
