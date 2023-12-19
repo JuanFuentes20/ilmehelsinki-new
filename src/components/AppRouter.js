@@ -11,8 +11,8 @@ import data from '../db.json'
 
 const scrollToSection = (classname) => {
   const navbar = document.querySelector(".navbar");
-  const mobileMenu = document.querySelector(".hamburger-navbar-links")
-  const mobileMenuHeight = mobileMenu.offsetHeight
+  //const mobileMenu = document.querySelector(".hamburger-navbar-links")
+  //const mobileMenuHeight = mobileMenu.offsetHeight
   const element = document.querySelector(classname);
   const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
   const navbarHeight = navbar.offsetHeight;
@@ -43,7 +43,7 @@ export default function AppRouter() {
 
     const handleScroll = () => {
         const currentScrollY = window.scrollY;
-        if (currentScrollY > 20) {
+        if (currentScrollY > 50) {
             setScroll(true);
         } else {
             setScroll(false);

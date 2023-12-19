@@ -9,6 +9,10 @@ export default function Navbar({scrollToSection, scroll}) {
     };
 
     const displayMenu = () => {
+        const navbar = document.querySelector(".navbar")
+        const hamburgerSpan = document.querySelector(".hamburger span")
+        navbar.classList.toggle("active")
+        hamburgerSpan.classList.toggle("active")
         const menu = document.querySelector(".hamburger-navbar-links")
         const hamburger = document.querySelector(".hamburger")
         hamburger.classList.toggle("active")
@@ -30,7 +34,7 @@ export default function Navbar({scrollToSection, scroll}) {
                     }}>Yhteystiedot</li>
                     </ul>
                 </div>
-                <div className="hamburger" onClick={displayMenu}>
+                <div className="hamburger" onClick={() => displayMenu()}>
                     <span></span>
                     <span></span>
                     <span></span>

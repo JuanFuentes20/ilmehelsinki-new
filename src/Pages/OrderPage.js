@@ -1,5 +1,5 @@
-import { useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import Order from '../components/Order';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -7,6 +7,11 @@ import { Carousel } from 'react-responsive-carousel';
 export default function OrderPage({items}) {
 
     const [modelIndex, setModelIndex] = useState(0)
+    const navigate = useNavigate()
+    const navigateTo = (path) => {
+      navigate(path);
+      window.scrollTo(0, 0); // Scroll to the top of the page
+  };
 
     const { id } = useParams()
     const idExists = items.length > 0 && items.some(item => item.id === id)
@@ -21,7 +26,6 @@ export default function OrderPage({items}) {
     }
 
     const handleOptions = (e) => {
-      console.log(e.target.value)
       setModelIndex(current => e.target.value)
     }
 
@@ -33,10 +37,7 @@ export default function OrderPage({items}) {
           <div className='container page-container'>
             <div className='top'>
                 <div className='go-back'>
-                  <a href="https://juanfuentes20.github.io/ilmehelsinki-new/" style={{ textDecoration: 'none', color: 'black'}}>
-                    <span className="material-symbols-outlined">arrow_back</span>
-                    <p>Palaa takaisin</p>
-                  </a>
+                    <span className="material-symbols-outlined" onClick={() => navigateTo("/")}>arrow_back</span>
                 </div>
             </div>
             <div className='item'>
