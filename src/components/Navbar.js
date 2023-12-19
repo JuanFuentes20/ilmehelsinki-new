@@ -21,10 +21,13 @@ export default function Navbar({scrollToSection, scroll}) {
                 <h2>ILME</h2>
                 <div className="navbar-links">
                     <ul>
-                        <li><a href="/ilmehelsinki-new" style={{ textDecoration: 'none', color: 'white'}}>Koti</a></li>
+                        <li onClick={() => navigateTo("/")}>Koti</li>
                         <li onClick={() => navigateTo("/collection")}>Tuotteet</li>
                         <li onClick={() => navigateTo("/about-us")}>Meistä</li>
-                        <li onClick={() => scrollToSection(".contacts")}>Yhteystiedot</li>
+                        <li onClick={() => {
+                        scrollToSection(".contacts")
+                        displayMenu()
+                    }}>Yhteystiedot</li>
                     </ul>
                 </div>
                 <div className="hamburger" onClick={displayMenu}>
@@ -35,10 +38,13 @@ export default function Navbar({scrollToSection, scroll}) {
             </div>
             <div className="hamburger-navbar-links">
                 <ul>
-                    <li><a href="/ilmehelsinki-new" style={{ textDecoration: 'none', color: 'white'}}>Koti</a></li>
+                    <li onClick={() => navigateTo("/")}>Koti</li>
                     <li onClick={() => navigateTo("/collection")}>Tuotteet</li>
                     <li onClick={() => navigateTo("/about-us")}>Meistä</li>
-                    <li onClick={() => scrollToSection(".contacts")}>Yhteystiedot</li>
+                    <li onClick={() => {
+                        scrollToSection(".contacts")
+                        displayMenu()
+                    }}>Yhteystiedot</li>
                 </ul>
             </div>
         </div>

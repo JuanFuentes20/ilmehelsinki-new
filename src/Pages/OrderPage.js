@@ -1,39 +1,23 @@
 import { useParams } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Order from '../components/Order';
-import Footer from '../components/Footer';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
 export default function OrderPage({items}) {
 
-    const [imageIndex, setImageIndex] = useState(0)
     const [modelIndex, setModelIndex] = useState(0)
 
     const { id } = useParams()
     const idExists = items.length > 0 && items.some(item => item.id === id)
     const item = idExists ? items.find(item => item.id === id) : null
 
-    const handleNextImage = () => {
-      const img = document.querySelector(".order-img")
-      img.classList.add("fade-active")
-      setTimeout(() => {
-        setImageIndex(current => {
-          return (current === item.productImages.length - 1 ? 0 : current + 1)
-         })
-        img.classList.remove("fade-active")
-      },500)
-    }
-
-    const handlePreviousImage = () => {
-      const img = document.querySelector(".order-img")
-      img.classList.add("fade-active")
-      setTimeout(() => {
-        setImageIndex(current => {
-          return (current === 0 ? item.productImages.length - 1 : current - 1)
-         })
-        img.classList.remove("fade-active")
-      },500)
+    const navbar = document.querySelector(".navbar")
+    if(navbar){
+      navbar.style.color = "black"
+      const hamburgerSpans = document.querySelectorAll(".hamburger span")
+      hamburgerSpans.forEach(hamburgerSpan => hamburgerSpan.style.backgroundColor = "black")
+      
     }
 
     const handleOptions = (e) => {
@@ -46,9 +30,6 @@ export default function OrderPage({items}) {
           <div>Loading...</div>
         ) : item ? (
           <>
-          <div className="banner">
-              <h1><a href="https://juanfuentes20.github.io/ilmehelsinki-new/" style={{ textDecoration: 'none', color: 'white', opacity: 0.9}}>ILME</a></h1>
-          </div>
           <div className='container page-container'>
             <div className='top'>
                 <div className='go-back'>
@@ -59,41 +40,42 @@ export default function OrderPage({items}) {
                 </div>
             </div>
             <div className='item'>
-            <div className="product-page-image">
-                    <Carousel className='crsl'>
-                      {item.productImages.map(image => {
-                        return (
-                              <img key={image} src={process.env.PUBLIC_URL + image} alt='productImage'/>
-                        )
-                      })}
-                    </Carousel>
-                 </div>
-                 <div className='product-info'>
-                    <div><h2>{item.name}</h2></div>
+                <div className="product-page-image">
+                  <Carousel className='crsl'>
+                    {item.productImages.map(image => {
+                      return (
+                            <img className='carousel-img' key={image} src={process.env.PUBLIC_URL + image} alt='productImage'/>
+                      )
+                    })}
+                  </Carousel>
+                </div>
+                <div className='product-info'>
+                  <h2>{item.name}</h2>
+                  <div className='reveal'>
                     <p>{item.models ? item.models[modelIndex].price : item.price}€</p>
                     <p>{item.summary}</p>
                     <p>{item.description}</p>
-                    <div className='item-measures'>
-                      <h2 style={{"paddingBottom":"5%"}}>Tuotetiedot</h2>
-                      {item.models && (<div>
-                        <select onChange={handleOptions}>
-                          {item.models.map((model, index) => {
-                            return <option key={model.size} value={index}>{model.size}</option>
-                          })}
-                        </select>
-                      </div>)}
-                      <ul>
-                        <li>Korkeus: {item.models ? item.models[modelIndex].height : item.height}</li>
-                        <li>Leveys: {item.models ? item.models[modelIndex].width : item.width}</li>
-                        <li>Pituus: {item.models ? item.models[modelIndex].length : item.length}</li>
-                      </ul>
-                      
-                    </div>
+                  </div>
+                  <div className='item-measures reveal'>
+                    <h2 style={{"paddingBottom":"5%"}}>Tuotetiedot</h2>
+                    {item.models && (<div>
+                      <select onChange={handleOptions}>
+                        {item.models.map((model, index) => {
+                          return <option key={model.size} value={index}>{model.size}</option>
+                        })}
+                      </select>
+                    </div>)}
+                    <ul>
+                      <li>Korkeus: {item.models ? item.models[modelIndex].height : item.height}</li>
+                      <li>Leveys: {item.models ? item.models[modelIndex].width : item.width}</li>
+                      <li>Pituus: {item.models ? item.models[modelIndex].length : item.length}</li>
+                    </ul>
+                    
+                  </div>
                 </div>
             </div>
           </div>
-          <Order />
-          <Footer />
+          <Order/>
           </>
         ) : (
           <h1>Page Not Found</h1>

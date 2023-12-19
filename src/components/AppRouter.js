@@ -18,9 +18,9 @@ const scrollToSection = (classname) => {
   const navbarHeight = navbar.offsetHeight;
   let scrollPosition = elementPosition - navbarHeight;
 
-  if(mobileMenu.classList.contains("active")){
+  /*if(mobileMenu.classList.contains("active")){
     scrollPosition -= mobileMenuHeight
-  }
+  }*/
 
   if(element){
     element.style.transition = "scroll 3s ease-in-out"
@@ -84,7 +84,7 @@ export default function AppRouter() {
         <Route exact path='/' element={<Home items={items} blogs={blogs} scroll={scroll}/>} />
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/collection' element={<Collection items={items}/>}/>
-        <Route path="/tuote/:id" element={<OrderPage items={items} />} />
+        <Route path="/collection/:id" element={<OrderPage items={items} />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
       <Footer />

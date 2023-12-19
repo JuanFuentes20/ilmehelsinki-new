@@ -21,7 +21,7 @@ export default function Collection({items}) {
 
     const handleBuy = (item) => {
         console.log("Tilaa")
-        navigate(`/tuote/${item.id}`)
+        navigate(`/collection/${item.id}`)
         window.scrollTo(0, 0);
     }
 

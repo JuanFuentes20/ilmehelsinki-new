@@ -70,11 +70,11 @@ export default function Order() {
             myös tilanteissa, missä haluatte tietää lisää.</p>
             <form ref={form} onSubmit={handleSubmit}>
                 <label htmlFor="name">Nimi</label>
-                <input name="user_name" type="text"/>
+                <input name="user_name" type="text" placeholder='Nimi'/>
                 <label htmlFor="email">Sähköposti</label>
-                <input name="user_email" type="email"/>
+                <input name="user_email" type="email" placeholder='Sähköposti'/>
                 <label htmlFor="message">Viesti</label>
-                <textarea name="message" type="text"/>
+                <textarea name="message" type="text" placeholder='Jätä yhteydenottasi tähän.'/>
                 <ReCAPTCHA
                 sitekey={process.env.REACT_APP_CAPTCHA_KEY}
                 onChange={onChange}
