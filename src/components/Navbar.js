@@ -2,6 +2,11 @@ import {useNavigate} from 'react-router-dom'
 
 export default function Navbar({scrollToSection, scroll}) {
     const navigate = useNavigate()
+    const navigateTo = (path) => {
+        navigate(path);
+        window.scrollTo(0, 0); // Scroll to the top of the page
+        displayMenu()
+    };
 
     const displayMenu = () => {
         const menu = document.querySelector(".hamburger-navbar-links")
@@ -16,9 +21,9 @@ export default function Navbar({scrollToSection, scroll}) {
                 <h2>ILME</h2>
                 <div className="navbar-links">
                     <ul>
-                        <li><a href={window.location} style={{ textDecoration: 'none', color: 'white'}}>Koti</a></li>
-                        <li onClick={() => scrollToSection(".collection")}>Tuotteet</li>
-                        <li onClick={() => navigate("/about-us")}>Meistä</li>
+                        <li><a href="/ilmehelsinki-new" style={{ textDecoration: 'none', color: 'white'}}>Koti</a></li>
+                        <li onClick={() => navigateTo("/collection")}>Tuotteet</li>
+                        <li onClick={() => navigateTo("/about-us")}>Meistä</li>
                         <li onClick={() => scrollToSection(".contacts")}>Yhteystiedot</li>
                     </ul>
                 </div>
@@ -30,9 +35,9 @@ export default function Navbar({scrollToSection, scroll}) {
             </div>
             <div className="hamburger-navbar-links">
                 <ul>
-                    <li><a href={window.location} style={{ textDecoration: 'none', color: 'white'}}>Koti</a></li>
-                    <li onClick={() => scrollToSection(".collection")}>Tuotteet</li>
-                    <li onClick={() => navigate("/about-us")}>Meistä</li>
+                    <li><a href="/ilmehelsinki-new" style={{ textDecoration: 'none', color: 'white'}}>Koti</a></li>
+                    <li onClick={() => navigateTo("/collection")}>Tuotteet</li>
+                    <li onClick={() => navigateTo("/about-us")}>Meistä</li>
                     <li onClick={() => scrollToSection(".contacts")}>Yhteystiedot</li>
                 </ul>
             </div>

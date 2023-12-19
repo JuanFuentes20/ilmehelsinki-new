@@ -4,6 +4,7 @@ import AboutUs from './AboutUs'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import NoPage from '../Pages/NoPage'
+import Collection from './Collection'
 import OrderPage from '../Pages/OrderPage'
 import { useState, useEffect } from 'react'
 import data from '../db.json'
@@ -42,20 +43,39 @@ export default function AppRouter() {
 
     const handleScroll = () => {
         const currentScrollY = window.scrollY;
-        if (currentScrollY > 200) {
+        if (currentScrollY > 20) {
             setScroll(true);
         } else {
             setScroll(false);
         }
     };
 
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+    
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 70;
+    
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     setItems(items => data.data.items)
     setBlogs(blogs => data.data.blogs)
+    window.addEventListener("scroll", reveal);
 
-    return () => window.removeEventListener("scroll", handleScroll);
-
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener("scroll", reveal)
+    }
   }, [])
   return (
     <BrowserRouter basename='/ilmehelsinki-new'>
@@ -63,6 +83,7 @@ export default function AppRouter() {
       <Routes>
         <Route exact path='/' element={<Home items={items} blogs={blogs} scroll={scroll}/>} />
         <Route path='/about-us' element={<AboutUs />} />
+        <Route path='/collection' element={<Collection items={items}/>}/>
         <Route path="/tuote/:id" element={<OrderPage items={items} />} />
         <Route path="*" element={<NoPage />} />
       </Routes>

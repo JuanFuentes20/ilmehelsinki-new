@@ -1,4 +1,4 @@
-export default function Footer({scrollToSection}) {
+export default function Footer() {
 
     return (
         <footer>
