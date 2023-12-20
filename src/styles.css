@@ -110,8 +110,8 @@ li {
 }
 
 .hamburger.active span:nth-child(1) {
-    scale: 1.2;
-    transform: translateY(10px) rotate(45deg)
+    transform: translateY(3px) rotate(45deg);
+    transform-origin: left;
 }
 
 .hamburger.active span:nth-child(2) {
@@ -123,8 +123,8 @@ li {
 }
 
 .hamburger.active span:nth-child(3) {
-    scale: 1.2;
-    transform: translateY(-7px) rotate(-45deg)
+    transform: translateY(-4px) rotate(-45deg);
+    transform-origin: left;
 }
 
 .hamburger-navbar-links ul {
