@@ -124,7 +124,7 @@ li {
 
 .hamburger.active span:nth-child(3) {
     scale: 1.2;
-    transform: translateY(-6px) rotate(-45deg)
+    transform: translateY(-7px) rotate(-45deg)
 }
 
 .hamburger-navbar-links ul {
