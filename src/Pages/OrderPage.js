@@ -29,7 +29,7 @@ export default function OrderPage({items}) {
           <div className='container page-container'>
             <div className='top'>
                 <div className='go-back'>
-                    <span className="material-symbols-outlined" onClick={() => navigateTo("/")}>arrow_back</span>
+                    <span className="material-symbols-outlined" onClick={() => navigateTo("/collection")}>arrow_back</span>
                 </div>
             </div>
             <div className='item'>
