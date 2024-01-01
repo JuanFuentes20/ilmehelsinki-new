@@ -44,7 +44,10 @@ export default function Order() {
         const validated = validateForm()
         if(captchaVerified && validated){
           console.log("Sending message")
-          emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+          const notification = document.querySelector(".notification")
+          notification.classList.add("active")
+          e.target.reset()
+          /*emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
           .then((result) => {
               console.log(result.text);
               const notification = document.querySelector(".notification")
@@ -53,7 +56,7 @@ export default function Order() {
           }, (error) => {
               console.log(error.text);
               setSubmitError(true)
-          });
+          });*/
         }
     }
 
@@ -79,7 +82,7 @@ export default function Order() {
                 sitekey={process.env.REACT_APP_CAPTCHA_KEY}
                 onChange={onChange}
               />
-                <button disabled={!captchaVerified} style={{ opacity: !captchaVerified ? 0.2 : 1 }}type="Submit">Lähetä</button>
+                <button disabled={!captchaVerified} style={{ opacity: !captchaVerified ? 0.2 : 1, cursor: !captchaVerified ? 'initial' : 'pointer'}}type="Submit">Lähetä</button>
             </form>
             <Notification submitError={submitError} setSubmitError={setSubmitError}/>
         </div>

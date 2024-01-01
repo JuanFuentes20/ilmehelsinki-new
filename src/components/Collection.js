@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useSearchParams } from "react-router-dom"
 
 export default function Collection({items}) {
     const navigate = useNavigate()
-    const [activeFilter, setActiveFilter] = useState("All")
+    const [searchParams] = useSearchParams();
+    const category = searchParams.get('category');
+    const [activeFilter, setActiveFilter] = useState(category || "All")
+
+
+    useEffect(() => {
+        // Update activeFilter when the URL changes
+        setActiveFilter(category || "All");
+    }, [category]);
 
     useEffect(()=> {
         const filters = document.querySelectorAll(".filter")
@@ -27,7 +35,8 @@ export default function Collection({items}) {
 
     const handleFilterClick = (event, category) => {
         event.preventDefault();
-        setActiveFilter(category);
+        setActiveFilter(category)
+        navigate(`/collection?category=${category}`);
     };
     return (
         <div className="collection">

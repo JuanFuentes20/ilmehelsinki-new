@@ -45,7 +45,9 @@ export default function Navbar({scrollToSection, scroll}) {
     return (
         <div className="navbar-container">
             <div className={scroll ? "navbar scrolled" : "navbar"}>
-                <h2>ILME</h2>
+                <h2 onClick={() => {
+                    navigate("/")
+                    window.scrollTo(0, 0)}}>ILME</h2>
                 <div className="navbar-links">
                     <ul>
                         <li onClick={() => navigateTo("/")}>Koti</li>
