@@ -24,7 +24,7 @@ const LandingContent = () => {
                     <img alt='Pöydät kategoria' src={process.env.PUBLIC_URL + "/images/karkki3.jpeg"}/>
                     <p>Pöydät</p>
                 </div>
-                <div className='category reveal' onClick={() => handleCategoryClick("Tuolit")}>
+                <div className='category reveal' onClick={() => handleCategoryClick("Tuoli")}>
                     <img alt='Tuolit kategoria' src={process.env.PUBLIC_URL + "/images/rockstar.jpeg"}/>
                     <p>Tuolit</p>
                 </div>
