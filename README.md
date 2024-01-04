@@ -2,6 +2,8 @@
 
 This project is a sleek and modern website for a design furniture company, showcasing their unique products and allowing users to subscribe to a mailing list and contact the owners directly through an email form.
 
+Live version of the website: [https://juanfuentes20.github.io/ilmehelsinki-new](https://juanfuentes20.github.io/ilmehelsinki-new)
+
 ## Features
 
 - **Product Showcase**: Highlights the company's furniture designs with detailed descriptions and high-quality images.
