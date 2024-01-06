@@ -25,6 +25,8 @@ img {
     max-width: 100%;
 }
 
+
+
 .container {
     padding: 5rem 1rem;
 }
@@ -260,6 +262,7 @@ form button {
     border: 0;
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 
 /* About us*/
@@ -606,7 +609,7 @@ footer .contacts {
     }
 
     .categories{
-        padding: 2rem;
+        padding: 6rem;
     }
     .hamburger {
         opacity: 0;

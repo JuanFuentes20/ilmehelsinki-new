@@ -16,8 +16,8 @@ const LandingContent = () => {
 
     return (
         <div className='landing'>
-            <div className='product-tag reveal'>
-                <p>Käsityönä valmistetut huonekalut, joissa yhdistyvät ajaton pohjoismainen muotoilu ja kestävät materiaalit.</p>
+            <div className='product-tag'>
+                <p className='reveal'>Käsityönä valmistetut huonekalut, joissa yhdistyvät ajaton pohjoismainen muotoilu ja kestävät materiaalit.</p>
             </div>
             <div className='categories'>
                 <div className='category reveal' onClick={() => handleCategoryClick("Pöytä")}>
