@@ -21,19 +21,19 @@ const LandingContent = () => {
             </div>
             <div className='categories'>
                 <div className='category reveal' onClick={() => handleCategoryClick("Pöytä")}>
-                    <img alt='Pöydät kategoria' src={process.env.PUBLIC_URL + "/images/karkki3.jpeg"}/>
+                    <div className='img-container'><img alt='Pöydät kategoria' src={process.env.PUBLIC_URL + "/images/karkki3.jpeg"}/></div>
                     <p>Pöydät</p>
                 </div>
                 <div className='category reveal' onClick={() => handleCategoryClick("Tuoli")}>
-                    <img alt='Tuolit kategoria' src={process.env.PUBLIC_URL + "/images/rockstar.jpeg"}/>
+                    <div className='img-container'><img alt='Tuolit kategoria' src={process.env.PUBLIC_URL + "/images/rockstar.jpeg"}/></div>
                     <p>Tuolit</p>
                 </div>
                 <div className='category reveal' onClick={() => handleCategoryClick("Senkki")}>
-                    <img alt='Senkit kategoria' src={process.env.PUBLIC_URL + "/images/senkki1.jpeg"}/>
+                    <div className='img-container'><img alt='Senkit kategoria' src={process.env.PUBLIC_URL + "/images/senkki1.jpeg"}/></div>
                     <p>Senkit</p>
                 </div>
                 <div className='category reveal' onClick={() => handleCategoryClick("Taso")}>
-                    <img alt='Tasot kategoria' src={process.env.PUBLIC_URL + "/images/laineikko4.jpeg"}/>
+                    <div className='img-container'><img alt='Tasot kategoria' src={process.env.PUBLIC_URL + "/images/laineikko4.jpeg"}/></div>
                     <p>Tasot</p>
                 </div>
             </div>

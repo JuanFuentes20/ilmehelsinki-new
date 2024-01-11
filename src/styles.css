@@ -222,10 +222,20 @@ h1 {
     text-decoration: underline;
 }
 
+.img-container {
+    overflow: hidden;
+    height: 100%;
+}
+
 .category img {
     height: 100%;
     object-fit: cover;
     width: 100%;
+    transition: 1s ease;
+}
+
+.category img:hover {
+    transform: scale(1.1);
 }
 
 .subscription {
