@@ -6,7 +6,7 @@ export default function AboutUs() {
                 <img className="about-us-image" alt="Kanto" src={process.env.PUBLIC_URL + "/images/kanto.jpeg"}/>
                 <p>Käsintehtyjen huonekalujen valmistus luo ainutlaatuisen yhteyden työhön. Se herättää arvostusta käytettyjä materiaaleja ja valmistusprosessia kohtaan, muuttaen jokaisen huonekalun kotisi henkilökohtaiseksi tarinaksi.</p>
             </header>
-            <div className="about-main">
+            <div className="about-main wrapper">
                 <img className="collab-image" alt="Yhteiskuva" src={process.env.PUBLIC_URL + "/images/yhteiskuva.jpeg"}/>
                 <p>Ilme on Helsinkiläinen design studio, joka tuottaa ainutlaatuisia huonekaluja inspiroiviin kohtauspaikkoihin kotona, toimistoissa ja julkisissa tiloissa. Omaperäiset ja rohkeat muodot näkyvät tuotteissamme. Valmistamme huonekaluja sekä taide-esineitä Ilmeen omalla verstaalla Helsingissä. Toteutamme myös mittatilaustöitä ja suurempia kokonaisuuksia. Näistä lisää alempana kohdassa projektit.</p>
             </div>

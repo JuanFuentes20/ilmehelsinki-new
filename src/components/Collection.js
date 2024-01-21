@@ -44,7 +44,7 @@ export default function Collection({items}) {
                 <img className="about-us-image" alt="Kuva nojatuolista" src={process.env.PUBLIC_URL + "/images/furnitures.jpg"}/>
                 <p>Luo yhteys huonekalujen suunnitteluprosessiin, herättäen kunnioitusta materiaaleja ja valmistustapaa kohtaan.</p>
             </div>
-            <div className="accessibility">
+            <div className="accessibility wrapper">
                 <h3>Tuotteet</h3>
                 <div className="filters">
                     {uniqueCategories.map(category => {
@@ -52,7 +52,7 @@ export default function Collection({items}) {
                     })}
                 </div>
             </div>
-            <div className="product-list">
+            <div className="product-list wrapper">
             {items.map(item => {
                 return (activeFilter === "All" || item.category === activeFilter) && 
                      (

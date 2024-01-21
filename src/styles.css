@@ -25,7 +25,10 @@ img {
     max-width: 100%;
 }
 
-
+.wrapper {
+    max-width: 1540px;
+    margin: auto;
+}
 
 .container {
     padding: 5rem 1rem;
@@ -619,7 +622,7 @@ footer .contacts {
     }
 
     .categories{
-        padding: 6rem;
+        padding: 4rem 1rem;
     }
     .hamburger {
         opacity: 0;
@@ -648,7 +651,7 @@ footer .contacts {
     }
 
     .collection-hero {
-        height: 65vh;
+        height: 55vh;
     }
 
     .collection-hero p {
@@ -687,11 +690,6 @@ footer .contacts {
         max-height: 40rem;
     }
 
-    .articles {
-        gap: 2rem;
-        padding: 2rem 15rem;
-    }
-
     .articles p {
         max-width: 40rem;
     }
@@ -725,16 +723,9 @@ footer .contacts {
 
  @media (min-width: 1440px) {
 
-    .product-list {
-        padding: 2rem 15rem;
-    }
-
     .articles {
         flex-direction: row;
-    }
-
-    .accessibility {
-        padding: 0 15rem;
+        justify-content: center;
     }
 
     .collection-hero p {
@@ -744,10 +735,6 @@ footer .contacts {
 
     .about-hero p {
         font-size: 1.5rem;
-    }
-
-    .about-main {
-        padding: 2rem 15rem;
     }
 
     .slide .carousel-img {

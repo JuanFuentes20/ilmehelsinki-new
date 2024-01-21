@@ -19,7 +19,7 @@ const LandingContent = () => {
             <div className='product-tag'>
                 <p className='reveal'>Käsityönä valmistetut huonekalut, joissa yhdistyvät ajaton pohjoismainen muotoilu ja kestävät materiaalit.</p>
             </div>
-            <div className='categories'>
+            <div className='categories wrapper'>
                 <div className='category reveal' onClick={() => handleCategoryClick("Pöytä")}>
                     <div className='img-container'><img alt='Pöydät kategoria' src={process.env.PUBLIC_URL + "/images/karkki3.jpeg"}/></div>
                     <p>Pöydät</p>
@@ -37,7 +37,7 @@ const LandingContent = () => {
                     <p>Tasot</p>
                 </div>
             </div>
-            <div className='subscription reveal'>
+            <div className='subscription reveal wrapper'>
                 <h3>Tilaa</h3>
                 <p>Liity sähköpostilistallemme saadaksesi uutisia ja päivityksiä.</p>
                 <form>
