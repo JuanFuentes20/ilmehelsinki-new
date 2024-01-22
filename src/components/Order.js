@@ -66,24 +66,26 @@ export default function Order() {
 
     return (
         <div className="container order">
-            <h2>Tilaa meiltä</h2>
-            <p>Jätä meille yhteydenotto tässä tai soita numeroon <a href="tel:+358 44 521 1301">+358 44 521 1301</a>
-            tai <a href="tel:+358 50 441 4009">+358 50 441 4009</a>. Kertokaa tarkemmin mikäli haluatte
-            tuotteeseen joitain pieniä muutoksia, tai mikäli haluatte tuotteen mallikuvan tyylisenä. Ottakaa yhteyttä
-            myös tilanteissa, missä haluatte tietää lisää.</p>
-            <form ref={form} onSubmit={handleSubmit}>
-                <label htmlFor="name">Nimi</label>
-                <input name="user_name" type="text" placeholder='Nimi'/>
-                <label htmlFor="email">Sähköposti</label>
-                <input name="user_email" type="email" placeholder='Sähköposti'/>
-                <label htmlFor="message">Viesti</label>
-                <textarea name="message" type="text" placeholder='Jätä yhteydenottasi tähän.'/>
-                <ReCAPTCHA
-                sitekey={process.env.REACT_APP_CAPTCHA_KEY}
-                onChange={onChange}
-              />
-                <button disabled={!captchaVerified} style={{ opacity: !captchaVerified ? 0.2 : 1, cursor: !captchaVerified ? 'initial' : 'pointer'}}type="Submit">Lähetä</button>
-            </form>
+            <div className='order-wrapper'>
+              <h2>Tilaa meiltä</h2>
+              <p>Jätä meille yhteydenotto tässä tai soita numeroon <a href="tel:+358 44 521 1301">+358 44 521 1301</a>
+              tai <a href="tel:+358 50 441 4009">+358 50 441 4009</a>. Kertokaa tarkemmin mikäli haluatte
+              tuotteeseen joitain pieniä muutoksia, tai mikäli haluatte tuotteen mallikuvan tyylisenä. Ottakaa yhteyttä
+              myös tilanteissa, missä haluatte tietää lisää.</p>
+              <form ref={form} onSubmit={handleSubmit}>
+                  <label htmlFor="name">Nimi</label>
+                  <input name="user_name" type="text" placeholder='Nimi'/>
+                  <label htmlFor="email">Sähköposti</label>
+                  <input name="user_email" type="email" placeholder='Sähköposti'/>
+                  <label htmlFor="message">Viesti</label>
+                  <textarea name="message" type="text" placeholder='Jätä yhteydenottasi tähän.'/>
+                  <ReCAPTCHA
+                  sitekey={process.env.REACT_APP_CAPTCHA_KEY}
+                  onChange={onChange}
+                />
+                  <button disabled={!captchaVerified} style={{ opacity: !captchaVerified ? 0.2 : 1, cursor: !captchaVerified ? 'initial' : 'pointer'}}type="Submit">Lähetä</button>
+              </form>
+            </div>
             <Notification submitError={submitError} setSubmitError={setSubmitError}/>
         </div>
     )

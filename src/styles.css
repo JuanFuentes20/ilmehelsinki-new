@@ -707,6 +707,10 @@ footer .contacts {
         object-fit: cover;
     }
 
+    .order-wrapper {
+        max-width: 800px;
+      }
+      
     form input {
         width: 15rem;
     }
